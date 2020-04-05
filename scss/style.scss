@@ -39,7 +39,7 @@ body{
   
   &-text{
     font-size: 1.6rem;
-    line-height: 1.65;
+    line-height: 1.8;
   }
 }
 
@@ -63,7 +63,7 @@ body{
 }
 
 .btn-link{
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   padding: 1.5rem 2.5rem;
   display: inline-block;
   position: relative;
@@ -204,6 +204,54 @@ body{
          }
       }
     }
+
+    &__menu{
+      width: 100%;
+    }
+
+    .menu{
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background-color: $dark-gray;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .27);
+      overflow: hidden;
+      list-style-type: none;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: all .3s ease-out;
+
+      &--active{
+        transform: scaleY(1);
+      }
+
+      &__item{
+        margin: 1.5rem;
+        position: relative;
+
+        &:nth-child(2){
+          margin-top: .5rem;
+        }
+
+        .menu__link{
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          color: $white;
+          transition: color .3s ease-out;
+
+          &:hover{
+             color: $yellow;
+          }
+        }
+      }
+
+      &__image{
+        width: 125px;
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+      }
+    }
   }
 
   .header{
@@ -225,11 +273,28 @@ body{
 
     &__text{
       text-align: center;
-      padding: 0 1rem;
+      padding: 0 1.25rem;
     }
+  }
 
-   
+  .map{
+    &__link{
+      text-transform: lowercase;
+    }
+  }
 
+  .recruitment{
+    &__image{
+      width: 100%;
+    }
+  }
+  .plugins{
+    .list{
+      font-size: 1.6rem;
+      list-style-position: inside;
+    }
   }
 }
+
+
 
