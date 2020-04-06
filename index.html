@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
   <script src="scripts/script.js"></script>
 </head>
@@ -30,6 +35,10 @@
 
         <li class="menu__item">
           <a href="#recruitment" class="menu__link link">Rekrutacja</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="#additionals" class="menu__link link">Dodatkowe informacje</a>
         </li>
 
         <li class="menu__item">
@@ -66,11 +75,41 @@
       <img src="assets/wallpaper.png" class="recruitment__image" alt="">
     </section>
 
-    <section class="plugins section">
-      <h1 class="plugins__title section-title">Lista pluginów</h1>
-    
-      <p class="plugins__text section-text"></p>
+    <section class="additionals section" id="additionals">
+      <h1 class="additionals__title section-title">Dodatkowe informacje</h1>
+
+      <ul class="additionals__list list">
+        <li class="list__item"><span class="bold">IP Serwera:</span> naczelnakulturka.pl</li>
+        <li class="list__item"><span class="bold">Wersja:</span> 1.15.2</li>
+        <li class="list__item"><span class="bold">Tryb:</span> Survival</li>
+        <li class="list__item"><span class="bold">Premium:</span> Non-premium</li>
+        <li class="list__item"><span class="bold">Border mapy:</span> 2000x2000</li>
+        <li class="list__item"><span class="bold">Poziom trudności:</span> Medium</li>
+        <li class="list__item"><span class="bold">PVP:</span> Włączone</li>
+      </ul>
     </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <h3 class="footer-container__title">O serwerze</h3>
+        <p class="footer-container__text">Prywatny serwer Minecraft w stylu starego dobrego survivala. Dołącz do naszej społeczności już teraz!</p>
+      </div>
+
+      <div class="footer-container">
+        <h3 class="footer-container__title">Kontakt</h3>
+        <p class="footer-container__text">naczelnakulturka@gmail.com</p>
+        <a target="_blank" href="https://discord.gg/X3e2ySW" class="footer-container__link link">Discord</a>
+        <a target="_blank" href="https://www.mpcforum.pl/profile/1595242-graba4/" class="footer-container__link link">MPCforum</a>
+      </div>
+
+      <div class="footer-container">
+        <h3 class="footer-container__title">Ważne linki</h3>
+        <a target="_blank" href="https://docs.google.com/forms/d/15x8sRJfEYSRYJUfAHdY-NobkUIZBKjKgO6A66wzhJRw/edit?usp=sharing" class="footer-container__link link">Formularz rejestracyjny</a>
+        <a target="_blank" href="https://www.twitch.tv/graba4" class="footer-container__link link">Kanał Twitch</a>
+      </div>
+      
+      <p class="footer__text">Copyright &copy; 2020 Naczelna Kulturka</p>
+    </footer>
 
   </div>
 
