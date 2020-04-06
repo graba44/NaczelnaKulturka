@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
      });
   }
 
-  let url = window.location.toString();
-  console.log(url);
-
-   url = url.split("#")[0];
-   console.log(url);
+   let url = window.location.toString();
+   url = url.split("/#")[0];
 })
