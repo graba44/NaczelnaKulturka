@@ -2,7 +2,7 @@ $main-font: 'Roboto', sans-serif;
 $white: #fff;
 $black: #000;
 $yellow: #ffb046;
-$dark-gray: #3d3d3d;
+$dark-gray: #2c2c2c;
 $link-color: #005ba3;
 
 *,
@@ -43,6 +43,10 @@ body{
   }
 }
 
+.bold{
+  font-weight: 700;
+}
+
 .btn{
   cursor: pointer;
   border: none;
@@ -71,7 +75,7 @@ body{
   right: -5px;
   z-index: 1;
   font-size: 1.8rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: $black;
 
   &:hover::before {
@@ -214,7 +218,7 @@ body{
       top: 80px;
       left: 0;
       background-color: $dark-gray;
-      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .27);
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .5);
       overflow: hidden;
       list-style-type: none;
       transform-origin: top;
@@ -235,7 +239,7 @@ body{
 
         .menu__link{
           font-size: 1.8rem;
-          text-transform: uppercase;
+          text-transform: lowercase;
           color: $white;
           transition: color .3s ease-out;
 
@@ -246,10 +250,11 @@ body{
       }
 
       &__image{
-        width: 125px;
+        width: 150px;
         position: absolute;
-        right: 0;
-        bottom: -3px;
+        bottom: 0;
+        right: -35px;
+        transform: rotate(-35deg);
       }
     }
   }
@@ -277,21 +282,57 @@ body{
     }
   }
 
-  .map{
-    &__link{
-      text-transform: lowercase;
-    }
-  }
-
   .recruitment{
     &__image{
       width: 100%;
     }
   }
-  .plugins{
+
+  .additionals{
     .list{
+      list-style: none;
       font-size: 1.6rem;
-      list-style-position: inside;
+      line-height: 1.8;
+    }
+  }
+
+  .footer{
+    padding: 2rem;
+    background-color: $dark-gray;
+    color: $white;
+
+    &-container{
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: flex-start;
+
+      &:nth-last-child(1){
+        margin-bottom: 0;
+      }
+
+      &__title{
+        margin-bottom: .5rem;
+        font-size: 2rem;
+        color: $yellow;
+      }
+  
+      &__text{
+        font-size: 1.5rem;
+        line-height: 1.8;
+      }
+  
+      &__link{
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: lighten($color: $link-color, $amount: 20%)
+      }
+    }
+
+    &__text{
+      font-size: 1.2rem;
+      text-align: center;
     }
   }
 }
