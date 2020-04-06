@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let url = window.location.toString();
-   url = url.split("#")[0];
+   url = url.split("/#")[0];
 })
