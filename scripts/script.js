@@ -18,4 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove("menu--active")
      });
   }
+
+  let url = window.location.toString();
+  console.log(url);
+
+   url = url.split("#")[0];
+   console.log(url);
 })
