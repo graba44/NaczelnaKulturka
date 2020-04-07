@@ -6,6 +6,7 @@ $dark-gray: #2c2c2c;
 $link-color: #005ba3;
 $small-devices: 576px;
 $medium-devices: 768px;
+$large-devices: 992px;
 
 *,
 *::before,
@@ -19,8 +20,6 @@ html{
   font-family: $main-font;
   color: $black;
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 85px;
 }
 
 body{
@@ -244,12 +243,13 @@ body{
       }
 
       &__item{
-        margin: 1.5rem;
+        margin: 1.25rem 2rem;
         position: relative;
 
         .menu__link{
           font-size: 1.8rem;
-          text-transform: lowercase;
+          text-transform: uppercase;
+          font-weight: 700;
           color: $white;
           transition: color .3s ease-out;
 
@@ -270,28 +270,32 @@ body{
   }
 
   .header{
-    min-height: calc(100vh - 80px);
-    margin-top: 80px;
+    width: 90%;
+    margin: 110px auto 0;
     overflow: hidden;
-    text-align: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
     &__image{
-      width: 320px;
-      margin: 2rem 0;
-      opacity: .8;
+      display: none;
     }
 
     &__description{
       display: flex;
       flex-flow: column nowrap;
-      align-items: center;
-      
+
+      .header__title{
+        margin-bottom: 1rem;
+      }
+
       .header__text{
-        padding: 0 1.25rem;
+        line-height: 2;
+      }
+
+      .header__link{
+        align-self: center;
       }
     }
   }
@@ -330,7 +334,7 @@ body{
     color: $white;
 
     &-container{
-      max-width: 500px;
+      max-width: 300px;
       margin-bottom: 1.5rem;
       display: flex;
       flex-flow: column wrap;
@@ -365,8 +369,14 @@ body{
     }
 
     &__text{
+      flex-basis: 100%;
       font-size: 1.2rem;
       text-align: center;
+    }
+
+    &__line{
+      flex-basis: 100%;
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -379,8 +389,29 @@ body{
       }
     }
 
-    .header__image{
-      width: 420px;
+    .header{
+      width: 100%;
+      height: 100%;
+      flex-flow: row nowrap;
+
+      &__image{
+        display: block;
+        width: 45%;
+      }
+
+      &__description{
+        margin-right: 2rem;
+        align-items: center;
+
+        .header__title{
+          margin: 0;
+        }
+
+        .header__text{
+          line-height: 1.8;
+          text-align: center;
+        }
+      }
     }
 
     .additionals{
@@ -409,9 +440,8 @@ body{
         }
       }
 
-      &__text{
-        margin-top: 1rem;
-        flex-basis: 100%;
+      &__line{
+        margin: 1.5rem;
       }
     }
   }
@@ -419,12 +449,15 @@ body{
 
 @media (min-width: $medium-devices){
   .container{
+    .section-text{
+      font-size: 1.7rem;
+    }
+
     .header{
       flex-flow: row nowrap;
 
       &__image{
-        width: 380px;
-        margin: 0;
+        width: 50%;
       }
     }
 
@@ -454,7 +487,7 @@ body{
 
       &__image{
         margin-left: 1rem;
-        width: 380px;
+        width: 55%;
       }
     }
 
@@ -469,9 +502,56 @@ body{
       }
 
       &__text{
-        margin-top: 1rem;
         flex-basis: 100%;
       }
     }
   }
 }
+
+@media (min-width: $large-devices){
+  .container{
+    .section-title{
+      font-size: 3.5rem;
+      margin-bottom: .5rem;
+    }
+
+    .section-text{
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+
+    .btn-link{
+      font-size: 2rem;
+    }
+  
+    .header{
+      &__image{
+        width: 40%;
+      }
+
+      &__description{
+        width: 40%;
+      }
+    }
+
+    .additionals{
+      .list{
+        justify-content: center;
+        line-height: 2;
+        
+        &__item{
+          font-size: 2rem;
+          flex-basis: 33%;
+        }
+      }
+    }
+
+    .footer{
+      &-container{
+        max-width: inherit;
+      }
+    }
+  }
+}
+
+

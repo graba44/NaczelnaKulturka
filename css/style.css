@@ -11,8 +11,6 @@ html {
   font-family: "Roboto", sans-serif;
   color: #000;
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 85px;
 }
 
 body {
@@ -280,13 +278,14 @@ body {
 }
 
 .container .navigation .menu__item {
-  margin: 1.5rem;
+  margin: 1.25rem 2rem;
   position: relative;
 }
 
 .container .navigation .menu__item .menu__link {
   font-size: 1.8rem;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  font-weight: 700;
   color: #fff;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
@@ -306,10 +305,9 @@ body {
 }
 
 .container .header {
-  min-height: calc(100vh - 80px);
-  margin-top: 80px;
+  width: 90%;
+  margin: 110px auto 0;
   overflow: hidden;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,9 +324,7 @@ body {
 }
 
 .container .header__image {
-  width: 320px;
-  margin: 2rem 0;
-  opacity: .8;
+  display: none;
 }
 
 .container .header__description {
@@ -339,13 +335,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.container .header__description .header__title {
+  margin-bottom: 1rem;
 }
 
 .container .header__description .header__text {
-  padding: 0 1.25rem;
+  line-height: 2;
+}
+
+.container .header__description .header__link {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container .map__link:hover {
@@ -373,7 +376,7 @@ body {
 }
 
 .container .footer-container {
-  max-width: 500px;
+  max-width: 300px;
   margin-bottom: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,16 +420,46 @@ body {
 }
 
 .container .footer__text {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.container .footer__line {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 576px) {
   .container .navigation .menu__image {
     width: 180px;
   }
+  .container .header {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
   .container .header__image {
-    width: 420px;
+    display: block;
+    width: 45%;
+  }
+  .container .header__description {
+    margin-right: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .header__description .header__title {
+    margin: 0;
+  }
+  .container .header__description .header__text {
+    line-height: 1.8;
+    text-align: center;
   }
   .container .additionals .list {
     display: -webkit-box;
@@ -465,14 +498,15 @@ body {
         -ms-flex: 2;
             flex: 2;
   }
-  .container .footer__text {
-    margin-top: 1rem;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .container .footer__line {
+    margin: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
+  .container .section-text {
+    font-size: 1.7rem;
+  }
   .container .header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -480,8 +514,7 @@ body {
             flex-flow: row nowrap;
   }
   .container .header__image {
-    width: 380px;
-    margin: 0;
+    width: 50%;
   }
   .container .navigation {
     -webkit-box-pack: start;
@@ -514,7 +547,7 @@ body {
   }
   .container .recruitment__image {
     margin-left: 1rem;
-    width: 380px;
+    width: 55%;
   }
   .container .footer-container {
     text-align: center;
@@ -528,9 +561,42 @@ body {
             flex: 1;
   }
   .container .footer__text {
-    margin-top: 1rem;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container .section-title {
+    font-size: 3.5rem;
+    margin-bottom: .5rem;
+  }
+  .container .section-text {
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+  .container .btn-link {
+    font-size: 2rem;
+  }
+  .container .header__image {
+    width: 40%;
+  }
+  .container .header__description {
+    width: 40%;
+  }
+  .container .additionals .list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 2;
+  }
+  .container .additionals .list__item {
+    font-size: 2rem;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+  .container .footer-container {
+    max-width: inherit;
   }
 }
 /*# sourceMappingURL=style.css.map */
