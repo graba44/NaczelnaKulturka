@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +20,15 @@
   <div class="container">
 
     <nav class="navigation">
-      <img src="assets/logo.png" alt="Logo" class="navigation__logo">
+      <a href="#header" class="navigation__link">
+        <img src="assets/logo.png" alt="Logo" class="navigation__logo">
+      </a>
 
       <button class="navigation__hamburger hamburger btn">
         <span class="hamburger__bar"></span>
       </button>
 
-      <ul class="navigation__menu menu">
+      <ul class="navigation__menu menu menu--vertical">
         <img src="assets/creeper.png" class="menu__image" alt="Creeper">
 
         <li class="menu__item">
@@ -45,16 +47,36 @@
           <a href="https://www.twitch.tv/graba4/" target="_blank" class="menu__link link">Kanał twitch</a>
         </li>
       </ul>
+
+      <ul class="navigation__menu menu menu--horizontal">
+        <li class="menu__item">
+          <a href="#map" class="menu__link link">Mapa serwera</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="#recruitment" class="menu__link link">Rekrutacja</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="#additionals" class="menu__link link">Dodatkowe informacje</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="https://www.twitch.tv/graba4/" target="_blank" class="menu__link link">Kanał twitch</a>
+        </li>
+      </ul>
     </nav>
 
-    <header class="header">
+    <header class="header" id="header">
       <img src="assets/minecraft-skin.png" alt="Minecraft Player" class="header__image">
 
-      <h1 class="header__title section-title">O serwerze</h1>
+      <div class="header__description">
+        <h1 class="header__title section-title">O serwerze</h1>
       
-      <p class="header__text section-text">Jest to serwer prywatny zrzeszający pewną grupę graczy. Został stworzony głównie z powodu nudy oraz obecnie panującego KORONOWIRUSA. Zachowany jest w stylu czystego survivala (1.15.2) z domieszką kilku podstawowych pluginów. Na serwerze obowiązuje white-lista, jeżeli jesteś zainteresowany rekrutacją przejdź niżej.</p>
-      
-      <a href="#recruitment" class="header__link btn-link link">Czytaj więcej</a>
+        <p class="header__text section-text">Jest to serwer prywatny zrzeszający pewną grupę graczy. Został stworzony głównie z powodu nudy oraz obecnie panującego KORONAWIRUSA. Zachowany jest w stylu czystego survivala (1.15.2) z domieszką kilku podstawowych pluginów. Na serwerze obowiązuje white-lista, jeżeli jesteś zainteresowany rekrutacją przejdź niżej.</p>
+        
+        <a href="#recruitment" class="header__link btn-link link">Czytaj więcej</a>
+      </div>
     </header>
 
     <section class="map section" id="map">
@@ -62,7 +84,7 @@
 
       <p class="map__text section-text">Mapa pozwala zobaczyć prawie wszystkie poczynania graczy na serwerze. Możesz być jeszcze bardziej na bieżąco ogladając streamy z serwera na kanale <a target="_blank" class="map__link link" href="https://www.twitch.tv/graba4">Twitch</a>.</p>
 
-      <a href="https://www.twitch.tv/graba4/" target="_blank" class="map__link btn-link link">twitch.tv/graba4</a>
+      <a href="https://www.twitch.tv/graba4/" target="_blank" class="btn-link link">twitch.tv/graba4</a>
     </section>
 
     <section class="recruitment section" id="recruitment">
@@ -70,9 +92,9 @@
       
       <p class="recruitment__text section-text">Jeżeli chcielibyście zagrać na serwerze musicie wypełnić <a target="_blank" class="recruitment__link link" href="https://docs.google.com/forms/d/15x8sRJfEYSRYJUfAHdY-NobkUIZBKjKgO6A66wzhJRw/edit?usp=sharing">formularz rekrutacyjny</a>. Rozpatrzymy Wasze wnioski tak szybko jak to możliwe i odeślemy Wam informację zwrotną.</p>
 
-      <a target="_blank" class="recruitment__link btn-link link" href="https://docs.google.com/forms/d/15x8sRJfEYSRYJUfAHdY-NobkUIZBKjKgO6A66wzhJRw/edit?usp=sharing">Formularz</a>
+      <a target="_blank" class="btn-link link" href="https://docs.google.com/forms/d/15x8sRJfEYSRYJUfAHdY-NobkUIZBKjKgO6A66wzhJRw/edit?usp=sharing">Formularz</a>
 
-      <img src="assets/wallpaper.png" class="recruitment__image" alt="">
+      <img src="assets/wallpaper.png" class="recruitment__image" alt="Minecraft World">
     </section>
 
     <section class="additionals section" id="additionals">
@@ -82,9 +104,10 @@
         <li class="list__item"><span class="bold">IP Serwera:</span> naczelnakulturka.pl</li>
         <li class="list__item"><span class="bold">Wersja:</span> 1.15.2</li>
         <li class="list__item"><span class="bold">Tryb:</span> Survival</li>
+        <li class="list__item"><span class="bold">White-list:</span> Włączona</li>
         <li class="list__item"><span class="bold">Premium:</span> Non-premium</li>
         <li class="list__item"><span class="bold">Border mapy:</span> 2000x2000</li>
-        <li class="list__item"><span class="bold">Poziom trudności:</span> Medium</li>
+        <li class="list__item"><span class="bold">Poziom trudności:</span> Hard</li>
         <li class="list__item"><span class="bold">PVP:</span> Włączone</li>
       </ul>
     </section>
