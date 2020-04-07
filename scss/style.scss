@@ -29,7 +29,7 @@ body{
 
 .section{
   width: 90%;
-  margin: 2rem auto;
+  margin: 3rem auto;
   text-align: center;
 
   &-title{
@@ -445,6 +445,32 @@ body{
         &__item{
           margin: 0;
         }
+      }
+    }
+
+    .recruitment{
+      display: flex;
+      flex-flow: row nowrap;
+
+      &__image{
+        margin-left: 1rem;
+        width: 380px;
+      }
+    }
+
+    .footer{
+      &-container{
+        text-align: center;
+        align-items: center;
+
+        &:first-child{
+          flex: 1;
+        }
+      }
+
+      &__text{
+        margin-top: 1rem;
+        flex-basis: 100%;
       }
     }
   }
