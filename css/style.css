@@ -426,12 +426,6 @@ body {
   text-align: center;
 }
 
-.container .footer__line {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin-bottom: 1.5rem;
-}
-
 @media (min-width: 576px) {
   .container .navigation .menu__image {
     width: 180px;
@@ -498,8 +492,8 @@ body {
         -ms-flex: 2;
             flex: 2;
   }
-  .container .footer__line {
-    margin: 1.5rem;
+  .container .footer__text {
+    margin-top: 1.5rem;
   }
 }
 
