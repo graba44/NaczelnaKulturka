@@ -60,7 +60,7 @@ body {
 }
 
 .btn-link {
-  margin: 2.5rem 0;
+  margin: 3rem 0;
   padding: 1.5rem 2.5rem;
   display: inline-block;
   position: relative;
@@ -118,6 +118,7 @@ body {
 .container .navigation {
   width: 100%;
   height: 80px;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -136,7 +137,7 @@ body {
 
 .container .navigation__link {
   display: block;
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .container .navigation__link .navigation__logo {
@@ -148,7 +149,7 @@ body {
   height: 34px;
   position: relative;
   top: 0;
-  right: 20px;
+  right: 0;
   z-index: 1;
 }
 
@@ -304,6 +305,10 @@ body {
           transform: rotate(-35deg);
 }
 
+.container .navigation__icon-link {
+  display: none;
+}
+
 .container .header {
   width: 90%;
   margin: 110px auto 0;
@@ -353,6 +358,22 @@ body {
 
 .container .map__link:hover {
   text-decoration: underline;
+}
+
+.container .recruitment__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .recruitment__image {
@@ -523,12 +544,24 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   .container .navigation .menu__item {
-    margin: 0;
+    margin: 0 1rem;
+  }
+  .container .navigation__icon-link {
+    display: block;
+    padding: .5rem;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .container .navigation__icon-link:hover {
+    opacity: .5;
+  }
+  .container .navigation__icon-link:last-child {
+    margin-left: 1rem;
+  }
+  .container .navigation__icon-link .navigation__icon {
+    width: 32px;
   }
   .container .recruitment {
     display: -webkit-box;
@@ -577,6 +610,15 @@ body {
   }
   .container .header__description {
     width: 40%;
+  }
+  .container .navigation .menu__item {
+    margin: 0 2rem;
+  }
+  .container .navigation .menu__item .menu__link {
+    font-size: 2rem;
+  }
+  .container .navigation__icon-link .navigation__icon {
+    width: 40px;
   }
   .container .additionals .list {
     -webkit-box-pack: center;
