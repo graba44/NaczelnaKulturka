@@ -142,6 +142,13 @@ body {
 
 .container .navigation__link .navigation__logo {
   width: 175px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container .navigation__link .navigation__logo:hover {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .container .navigation__hamburger {
@@ -484,6 +491,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .container .additionals .list__item {
     font-size: 1.75rem;
@@ -555,7 +565,7 @@ body {
     transition: all .3s ease-in-out;
   }
   .container .navigation__icon-link:hover {
-    opacity: .5;
+    opacity: .65;
   }
   .container .navigation__icon-link:last-child {
     margin-left: 1rem;

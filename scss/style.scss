@@ -133,6 +133,11 @@ body{
 
       .navigation__logo{
         width: 175px;
+        transition: all .3s ease;
+
+        &:hover{
+          transform: rotate(2deg);
+        }
       }
     }
 
@@ -425,6 +430,7 @@ body{
       .list{
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
 
         &__item{
           font-size: 1.75rem;
@@ -492,7 +498,7 @@ body{
         transition: all .3s ease-in-out;
 
         &:hover{
-          opacity: .5;  
+          opacity: .65;  
         }
         
         &:last-child{
